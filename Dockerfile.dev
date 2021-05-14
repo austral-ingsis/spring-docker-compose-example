@@ -1,0 +1,6 @@
+FROM gradle:5.6.0-jdk8
+COPY . /home/gradle/src
+WORKDIR /home/gradle/src
+RUN gradle build
+EXPOSE 8080
+ENTRYPOINT ["java","-jar","/home/gradle/src/build/libs/rest-service-0.0.1-SNAPSHOT.jar"]
