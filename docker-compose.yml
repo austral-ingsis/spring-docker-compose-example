@@ -1,0 +1,18 @@
+version: '3'
+
+services:
+  db:
+    container_name: postgres_db
+    image: postgres:12
+    ports:
+    - 5432:5432
+    environment:
+      POSTGRES_USER: sa
+      POSTGRES_PASSWORD: password
+      POSTGRES_DB: compose-db
+    volumes:
+    - pgdata:/var/lib/postgresql/data
+
+volumes:
+  pgdata:
+    external: true
