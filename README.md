@@ -16,4 +16,4 @@
 
 ## Run container from image
 
-`docker run --env-file .env api_dev`
+`docker run --env-file .env -p 8080:8080 api_dev`
