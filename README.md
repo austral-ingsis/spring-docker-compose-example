@@ -17,3 +17,19 @@
 ## Run container from image
 
 `docker run --env-file .env -p 8080:8080 api_dev`
+
+# Run with Docker compose
+
+## Build images
+
+`docker compose build`
+
+This will build only the services with a `build` property
+
+## Run services
+
+`docker compose up`
+
+## Verify processes running
+
+`docker ps`
