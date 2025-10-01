@@ -4,7 +4,7 @@
 
 ### Build Command
 
-`docker build -t <IMAGE_NAME> -f <PATH_TO_DOCKERFILE> .
+`docker build -t <IMAGE_NAME> -f <PATH_TO_DOCKERFILE> .`
 
 ### Run Command
 
