@@ -1,5 +1,3 @@
-version: '3'
-
 services:
   api:
     container_name: "compose-api"
@@ -17,16 +15,14 @@ services:
 
   db:
     container_name: postgres_db
-    image: postgres:12
+    image: postgres:16
     ports:
-    - 5432:5432
+      - 5432:5432
     environment:
       POSTGRES_USER: sa
       POSTGRES_PASSWORD: password
       POSTGRES_DB: compose-db
     volumes:
-    - pgdata:/var/lib/postgresql/data
-
+      - pgdata:/var/lib/postgresql/data
 volumes:
   pgdata:
-    external: true
